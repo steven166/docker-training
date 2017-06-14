@@ -1,0 +1,11 @@
+version: '3'
+services:
+  docker-demo:
+    image: docker-demo:dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: node --debug=5858 ./src/bin/www
+    ports:
+      - 3000:3000
+      - 5858:5858
